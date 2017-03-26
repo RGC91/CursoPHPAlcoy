@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caso práctico</title>
+     <script type="text/javascript" src="jquery-3.1.1.js"></script>
+     <link rel="stylesheet" media="screen" href="QueriStyle.css">
+     <script type="text/javascript" src="ej71.js"></script>
+    <script>
+    
+      $.ajax({
+        url: "localhost/Raul/",
+        type: 'GET',
+        success: loadXMLDoc(),
+      });
+      
+
+function loadXMLDoc() {
+
+      
+      
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+          var datos=JSON.parse(xmlhttp.response);
+            
+           
+            var a=document.getElementById("nom");
+            var b=document.getElementById("cou");
+            a.setAttribute("value",datos.name);
+            b.setAttribute("value",datos.pais);
+          
+          
+          
+
+
+        }
+      }
+    // xmlhttp.open("GET","http://datos.gob.es/apidata/catalog/dataset/theme/hacienda",true);
+      xmlhttp.open("GET","piter2.json",true);
+      xmlhttp.send();
+    
+  </script>
+</head>
+<body>
+<form action="">
+    
+    
+    Nombre:<input name="Nombre" id="nom" type="text" placeholder="Nombre" maxlength="15" required="">
+    <br>
+    Pais:<input name="Pais" type="text" id="cou" placeholder="Pais" maxlength="9" required="">
+    <br>
+    <input name="Enviar" type="submit" >
+    <button type="button" onclick="loadXMLDoc()">Autorrellenar</button>
+</form>
+    
+</body>
+</html>

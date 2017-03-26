@@ -1,0 +1,17 @@
+.lis{
+    list-style:none;
+    text-align:center;
+}
+.tit{
+    text-align: center;
+    text-decoration: underline;
+}
+.cent{
+    text-align:center;
+}
+.g{
+    background-color: gray;
+}
+.w{
+    background-color: white;
+}

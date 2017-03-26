@@ -1,0 +1,44 @@
+{
+    "objectId" : "qwerty",
+    "owner" : {
+        "objectId" : "Persona1",
+        "phone" : "123456789",
+        "name" : "Paco Pérez",
+        "title": "Paquito",
+        "age" : 20,
+        "address" : {
+            "objectId" : "dir01",
+            "street" : "la boca",
+            "city" : "Alcoi",
+            "state" : "Alicante"
+        }
+    },
+    "contacts" : [
+        {
+            "objectId" : "Persona2",
+            "phone" : "123456788",
+            "name" : "Juan Pérez",
+            "title": "Juanito",
+            "age" : 21,
+            "address" : {
+                "objectId" : "dir01",
+                "street" : "la boca",
+                "city" : "Alcoi",
+                "state" : "Alicante"
+            }
+        },
+        {
+            "objectId" : "Persona3",
+            "phone" : "123456786",
+            "name" : "María Pérez",
+            "title": "Marieta",
+            "age" : 22,
+            "address" : {
+                "objectId" : "dir01",
+                "street" : "la boca",
+                "city" : "Alcoi",
+                "state" : "Alicante"
+            }
+        }
+    ]
+}

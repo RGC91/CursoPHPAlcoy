@@ -1,0 +1,88 @@
+		
+		/*  Estilos generales, usa con cualquier etiqueta o con span o div*/
+		.red{
+			color: #FF0000
+		}
+		.pi{
+			color: #FFFF00
+		}
+		.elegant{
+			font-style: italic;
+		}
+		/* trampear columnas, ojo con los moviles preguntamos cosas*/
+		.col{
+			
+			display: inline-block;	
+			width: 33%;
+		}
+		/* control+espacio muestra las opciones para escribir */
+		.cruz{
+			cursor: crosshair;
+		}
+		/* alinear contenido de */
+		.cent{
+			text-align: center;
+		}
+
+		/*header{
+			background-color: #FF0000
+		}*/
+
+		
+		nav {
+			display: inline-block;
+			margin: 10px;
+			background-color: #FF0000;
+			
+		}
+		main{
+			background-color: #0000FF
+		}
+		footer{
+			/*Fixed te lo adapta, absolute te obliga a verlo, relativa es por defecto*/
+			/* ojo con windows10 y chrome*/
+			/*position: fixed;  */
+
+			color: green;
+		}
+
+		.ej1{
+			background-color: green;
+			text-align: center;
+		
+		}
+		.ej2{
+			background: linear-gradient(to right,orange,black)
+		}
+
+		.ej3{
+			border: solid black 10px;
+		}
+		.centrar {
+   			height: 400px;
+  			 width: 400px;
+/*   			margin-top: 100px;*/
+  			 margin-left: 350px;
+   			left: 50%;
+   			top: 50%;
+   			
+		}
+		body{
+			background-color: gray;
+		}
+		th,td{
+			border: solid black 3px;
+			border-collapse: collapse;
+			border-spacing: 0px;
+		}
+		tr:nth-child(odd){
+			background-color: orange;
+
+		}
+		tr:nth-child(even){
+			background-color: black;
+		}
+		tr:hover{
+			background-color: green;
+			cursor: crosshair;
+		}

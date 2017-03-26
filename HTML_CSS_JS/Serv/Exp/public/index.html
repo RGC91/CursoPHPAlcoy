@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba express</title>
+    <link rel="stylesheet" media="screen" href="styleruleta.css">
+    <link rel="icon" type="image/png" href="404.png" />
+</head>
+<body class="tapete">
+<img src="115.jpg">
+<form method="POST" action="/users" target="blank">
+    Nombre de Usuario:<input name="userName" type="text" placeholder="Nombre de Usuario" maxlength="15" required="">
+    <br>
+    Apellidos:<input name="apellido" type="text" placeholder="Apellidos" pattern="[a-zA-z]{1,15}" required="" title="Solo letras por favor">    
+    <br>
+    <input name="Borrar" type="reset" value="Borrar" >    
+    <input name="Enviar" type="submit" >
+    
+</body>
+</html>

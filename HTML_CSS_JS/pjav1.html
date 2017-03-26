@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var even=false;
+		// function isEven(num){
+		// 	if(num%2 == 0 && num!=1 && num!=0){
+		// 		alert("Es par");
+		// 		even=true;
+		// 		return true;
+		// 	}else{
+		// 	alert("No es par");
+		// 		return false;
+		// 	}
+		// }	
+		
+		// while(even== false){
+		// 	number = prompt("Introduce un numero");
+		// 	isEven(number);
+		// }
+		
+
+		// do
+		// {
+		// 	number = prompt("Introduce un numero");
+		// 	isEven(number);	
+		// }while(number%2 != 0 && number==1);
+		
+		// do
+		// {
+			// number = prompt("Introduce un numero");
+			// isEven(number);	
+		// }while(isEven(number)== false);
+
+		
+
+
+
+		function isPrime(){
+			tum= prompt("Introduce un numero");
+			if(tum%2 == 0 || tum==1 || tum==0){
+				alert("No es primo");
+			
+			}else{
+				var t=(tum+1);
+				for(var i=3;i<t;i++){
+					
+					var p=tum%i;
+				if(i==tum){
+					alert("El numero " + tum + " es primo");
+					break;
+				}
+					if(p == 0){
+						alert("El numero es divisible por " + i);
+						break;
+							}		
+				
+				
+				}
+
+				}
+			}						
+		 	isPrime();
+
+		 
+			
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

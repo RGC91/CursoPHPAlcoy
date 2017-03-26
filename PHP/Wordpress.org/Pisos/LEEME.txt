@@ -1,0 +1,2 @@
+Entrar por http://localhost/Pisos/index.php
+Notas: Basicamente es el del caso practico, pero he añadido Ciudad.

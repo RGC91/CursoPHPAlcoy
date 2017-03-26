@@ -1,0 +1,72 @@
+.imp{
+	height: 50px;
+	width: 50px;
+	margin-left: 2.5%;
+
+}
+
+.tit{
+	margin-left: 2.5%;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.bg{
+	background: linear-gradient(aqua,white)
+}
+.centeri{
+	margin-left: 50%;
+	height: 220px; 
+}
+.centerT{
+	margin-left: 50%;
+}
+.resalt{
+	font-weight: bold;
+
+}
+
+main{
+	float: left;
+	width: 80%;
+}
+aside{
+	float: right;
+	width: 20%;
+}
+
+
+
+footer{
+	clear:both;
+	text-align: center;
+}
+
+.alit{
+	margin-left: 2.5%
+}
+.alitx{
+	text-align: left
+}
+table,thead{
+			border: solid black 3px;
+			border-collapse: collapse;
+			border-spacing: 0px;
+			width: 500px;
+			height: 500px;
+
+		}
+		
+	
+		tr>td:nth-child(even):hover
+		{
+			background-color: aqua;
+			cursor: crosshair;
+		}
+
+tr>td:nth-child(odd){
+			text-align: right;
+		}
+tr>td.vacuo:hover{
+	background-color: transparent; 
+}				

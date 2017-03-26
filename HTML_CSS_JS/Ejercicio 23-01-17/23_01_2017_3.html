@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba checkboxes</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+     <link rel="stylesheet" media="screen" href="QueriStyle.css">
+</head>
+<body>
+
+
+<input type="text" name="nombre" ng-model="name">
+<p>Hello {{name}}!</p>
+<input type="checkbox" ng-model="prueba">
+<textarea ng-show="prueba"></textarea>
+<br>
+<br>
+<label>Ciudad:</label>
+<select  name="city" id="" value="ciudad" ng-model="ciutat">
+        <option value="Ali">Alicante</option>
+        <option value="Alc">Alcoy</option>
+        
+        <option value="Otros" ng-model="otros">Otra</option>
+        <input ng-show="ciutat == 'Otros'" type="text" name="" placeholder="Escriba su ciudad">        
+</select>
+<br>
+<label>Género:</label><br>
+<!-- inicializamos con  ng-init="gender='m'" o ng-checked="true" -->
+<input type="radio" value="m" ng-model="gender" ng-init="gender='m'" >Masculino<br>
+<input type="radio" value="f" ng-model="gender">Femenino<br>
+<input type="radio" value="o" ng-model="gender">Otro<br>
+ <input ng-show="gender == 'o'" type="text" name="" placeholder="Especifique">
+    <!-- Si usas ng-hide se mostraria siempre SALVO que pulsara otro -->
+</body>
+</html>

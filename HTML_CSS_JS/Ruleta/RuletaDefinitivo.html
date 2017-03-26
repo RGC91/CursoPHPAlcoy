@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="Raul Gimenez Cortes" name="author"/>
+	<meta content="Casino" name="description" />
+	<meta content="Ruleta, Casino, Desproposito" name="keywords" />
+	<title>Juega a la ruleta con nosotros</title>
+	<link rel="stylesheet" media="screen" href="styleruleta.css">
+	<!-- <script type="text/javascript" src="/js/codigo.js"></script> -->
+	<!-- javascript/css/html cheat Sheet -->
+	
+	 
+</head>
+<body class="tapete">
+<h1 class="tit">Ruleta de la fortuna</h1>
+
+<ul>
+	<p class="sub rules">REGLAS:</p>
+	<li class="rules">Haga click en el número por el que desea apostar.</li>
+	<li class="rules">Después se mostrará en color negro que número ha salido.</li>
+	<li class="rules">Disfrute y ... ¡¡¡MUCHA SUERTE!!!</li>	
+</ul>
+	<script type="text/javascript">
+		
+
+	 	function ruleta(){
+
+	 		
+			
+	 		// Creo un vector vacío y le asigno las cifras.
+			var casi=[];
+			// Teniendo en cuenta que el primer elemento de casi es casi[0].
+			for (var i = 0; i <40; i++){
+			casi[i] = i + 1 ;
+			}
+
+			// Creacion de tablero
+			for (var i = 1; i <41 ; i++) {
+				// Un div por cada "casilla"
+				var cas = document.createElement('div');
+				//Les asigno el estilo y la id
+				cas.setAttribute("class", "casilla");
+				cas.setAttribute("id", i);
+				// Añado el evento que me permitira "jugar" (si clico, comenzará el juego)
+				cas.addEventListener('click', jugar);
+				// "escribo el contenido de cada casilla"
+				cas.innerHTML = casi[i-1];
+				// Y pego la cassilla donde corresponde
+				document.body.appendChild(cas); 
+			}
+			// Esta funcion pintara de negro la casilla elegida al azar.
+			function pinH(item){
+				var b=document.getElementById(item);
+				b.setAttribute("class", "casillaH");
+			}		
+
+			function jugar(event){
+			
+				// Con estas instrucciones hacemos que cambie de color la casilla seleccionada.
+				this.setAttribute("class", "casillaP");
+				// Y con esto hacemos que solo se pueda clicar una.
+				this.removeEventListener('click', jugar);
+				// Asignamos la id del elemento clicado a una variable
+				// En este caso funciona puesto que las ids coinciden con el contenido de los divs, creo.
+				var apuesta=this.id		
+				// Calculamos el número elegido al azar y lo pintamos su casilla
+				ran=Math.round(1+Math.random()*39);
+				pinH(ran);
+				
+				// el setTimeOut lo uso para retrasar los alerts y las comprobaciones para que primero se vea
+				// el "resultado del juego, lo que hay en morado es el tiempo que se retrasa en milisegundos"
+				setTimeout(function(){ 
+
+					if (apuesta==ran)
+					{
+						alert("¡¡Enhorabuena!!   ¡¡La suerte te sonrie!!");	
+					}else{
+						alert("!Lo siento mucho amigo! !Parece que la fortuna no esta de tu lado!");
+						
+					}
+					var again=prompt("¿Desea probar suerte otra vez?"+" Yes para jugar. " + " Cualquier otra cosa para salir. ");
+						
+						
+				if(again=="Yes"){													
+					setTimeout(function(){
+					// location.reload(); me recarga la pagina, hay mas instrucciones, en location.replace() si meto una URL dentro del parentesis me mandará a esa pagina.
+					location.reload();
+							}, 500);			
+				}else{
+						alert("Esperamos que haya disfrutado de nuestro juego.");
+						location.reload();	
+				}	
+
+				}, 1000);
+				
+
+				
+				}
+							
+		}
+
+
+
+	ruleta();
+
+	 	
+	</script>
+	<!-- Cosas a mejorar:
+
+	1º Que me permita elegir las dimensiones del tablero (no solo el número de casillas, sino también su presentacion)	
+	2º Un boton para comenzar el juego
+	3º La posibilidad de realizar multiples apuestas(pintando cada apuesta de un color para una opción mas multiplayer)
+	4º Mejor presentación visual (Uso de estilos)
+
+
+
+	
+
+	 -->
+<footer>Gracias a Fran porque esto se ha hecho troceando su programa de cartas.</footer>
+</body>
+</html>

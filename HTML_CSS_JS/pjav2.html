@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Práctica Dom</title>
+	<script type="text/javascript">
+		
+	// function Evens(num){
+	// 	var vect=[];
+	// 	for(i=0;i<num;i++){
+
+	// 	vect[i]=2*(i+1);
+
+	// 	}
+	// 	alert(vect);
+	// }
+
+	// num=prompt("Introduce cuantos numeros pares quieres");
+	// 	Evens(num);
+
+	// 	function Odds(num){
+	// 	var vect=[];
+	// 	for(i=0;i<num;i++){
+
+	// 	vect[i]=1+2*(i);
+
+	// 	}
+	// 	alert(vect);
+	// }
+
+	// num=prompt("Introduce cuantos numeros pares quieres");
+	// 	Evens(num);
+
+	// function pali(tex){
+		
+	// 	t=tex.lenght;
+	// 	w=tex.split(" ");
+	// 	var wl=w.lenght;
+	// 	var w2=[];
+	// 	for(i=0;i<wl;i++){
+	// 		w2[i]=w[i].split("");
+	// 	}
+	// 	w3=w2.lenght;
+	// 	for(j=0;j<w3;j++){
+			
+	// 		if(w2[j]!=w2[w3-1-j]){
+	// 			alert("No es un palíndromo");
+	// 			break;
+	// 		}
+	// 	}
+	// 	alert("Es un palindromo");
+
+	// }
+
+		// num=prompt("Introduce tu hipotetico palindromo");
+		// pali(num);
+
+// function pali2(tex){
+		
+		
+// 		var w=tex.split(" ");
+// 		var w2=[];
+		
+// 		w2=w.join("");
+		
+// 		var w3=[];
+// 		w3=w2.split("");
+// 		var w4=[]
+// 		w4=w3.reverse();
+		
+// 		if(w3==w4){
+// 			alert("Es un palindromo");
+// 		}else{
+// 			alert("No es un palindromo");
+// 			}	
+// 	}
+
+
+
+// num=prompt("Introduce tu hipotetico palindromo");
+// 		pali2(num);
+
+	function ruleta(){
+		casi=prompt("Introduce tu apuesta");			
+			ran=Math.round(Math.random()*36);
+		if(-1>casi || casi>37){
+			alert("Números solo entre 1 y 36, se considera que 0 es la apuesta de la casa");
+			ruleta();
+		}
+
+		if(casi==ran){
+			alert("Enhorabuena!!!!");
+		}else{
+			alert("Lo siento, tu numero es " + casi + " y ha salido " + ran);
+		}
+	}
+
+	ruleta()
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

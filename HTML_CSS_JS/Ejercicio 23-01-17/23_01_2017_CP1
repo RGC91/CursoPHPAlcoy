@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Caso practico ANGULARJS</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+     <link rel="stylesheet" media="screen" href="QueriStyle.css">
+</head>
+<body>
+
+
+    <p>Hello {{name}}! <input type="text" name="nombre" ng-model="name"></p>
+    <script type="text/javascript">
+        var app= angular.module('myApp',[])
+    ];     
+
+
+    </script>
+<div ng-init="lista =
+[
+        {
+            'name': 'juan',
+            'edad': 23},
+        {
+            'name': 'paco',
+            'edad': 13},
+        {
+            'name': 'richar',
+            'edad': 20
+        },
+        {
+            'name': 'lola',
+            'edad': 21
+        }
+    ]">
+ <ul>
+<li ng-repeat="a in lista">{{a.name}} que tiene {{a.edad}}
+años</li>
+ </ul>
+ </div>
+<br>
+<div ng-init="lista =
+[
+        {
+            'name': 'juan',
+            'edad': 23
+        },
+        {
+            'name': 'paco',
+            'edad': 13
+        },
+        {
+            'name': 'richar',
+            'edad': 20
+        },
+        {
+            'name': 'lola',
+            'edad': 21
+        }
+    ]"></div>
+
+<label>Search: <input ng-model="searchText1"></label>
+<table id="searchTextResults1">
+  <tr><th>Name</th><th>Edad</th></tr>
+  <tr ng-repeat="friend in lista | filter:searchText1">
+    <td>{{friend.name}}</td>
+    <td>{{friend.edad}}</td>
+  </tr>
+</table>
+<br>
+
+<div ng-init="friends = [{name:'John', phone:'555-1276'},
+                         {name:'Mary', phone:'800-BIG-MARY'},
+                         {name:'Mike', phone:'555-4321'},
+                         {name:'Adam', phone:'555-5678'},
+                         {name:'Julie', phone:'555-8765'},
+                         {name:'Juliette', phone:'555-5678'}]"></div>
+
+<label>Search: <input ng-model="searchText2"></label>
+<table id="searchTextResults2">
+  <tr><th>Name</th><th>Phone</th></tr>
+  <tr ng-repeat="a in friends | filter:searchText2">
+    <td>{{a.name}}</td>
+    <td>{{a.phone}}</td>
+  </tr>
+</table>
+</body>
+</html>

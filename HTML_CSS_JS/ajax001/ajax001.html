@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax 001</title>
+  <script>
+    function loadXMLDoc() {
+      // creamos una instancia de la clase XMLHttpRequest
+      var xmlhttp = new XMLHttpRequest();
+
+      // aunque aún no hemos realizado la petición AJAX (lo haremos en la linea 33), definimos la función que se ejecutará cuando cambie el estado de la petición
+      xmlhttp.onreadystatechange=function() {
+        // cuando se complete la petición y obtengamos un status OK
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+          // podemos mostrar la respuesta dentro de una de las etiquetas de nuestro HTML, porque lo que nos devuelve es simplemente texto.
+          document.getElementById("myDiv").innerHTML = xmlhttp.response;
+
+          // pero también podemos usar el método JSON.parse() para convertir el texto de la respuesta en un objeto Javascript y poder acceder a sus propiedades.
+          // lo hacemos y guardamos el resultado en una variable
+          var respuesta = JSON.parse(xmlhttp.response);
+
+          //ahora podemos hacer lo que queramos con ese obejto...
+          console.log(respuesta)
+          // ...como imprimirlo en la consola del navegador. Puedes comprobarlo abriendo la pestaña de "consola" de tu navegador web y consultar la información obtenida para trabajar con ella.
+
+        }
+      }
+
+      // abrimos la conexión diciendo el método HTTP, la URL y si es asíncrona
+      xmlhttp.open("GET","ajax.json",true);
+
+      // y enviamos la petición. Ahora esperamos a que se dispare el evento onreadystatechange (línea 12)
+      xmlhttp.send();
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="myDiv"><h2>Let AJAX change this text</h2></div>
+  <button type="button" onclick="loadXMLDoc()">Change Content</button>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Registro</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<form method="GET" action="http://127.0.0.1/login_usuario" target="blank">
+	Nombre de Usuario:<input name="Nombre de Usuario" type="text" placeholder="Nombre de Usuario" maxlength="15" required="">
+	<br>
+	Nombre:<input name="NombreReal" type="text" placeholder="Nombre" maxlength="15" pattern="[a-zA-z]{1,15}" required="">
+	<br>
+	Apellidos:<input name="Apellido" type="text" placeholder="Apellidos" pattern="[a-zA-z]{1,15}" required="" title="Solo letras por favor">
+	<br>
+	
+	Correo electrónico:<input name="Correo" type="email" placeholder="Correo electrónico" maxlength="64" required="">
+	<br>
+	Fecha de nacimiento:<input name="Fecha" type="date" required="">
+	<br>
+	Sexo:
+	<br>
+	
+		Masculino:<input name="Genero" type="radio">
+	<br>
+		Femenino<input name="Genero" type="radio">
+	<br>
+	<!-- <select name="Sex" id="" value="Sexo">
+		<option value="" selected="" disabled="">-</option>
+		<option value="">Masculino</option>
+		<option value="">Femenino</option>
+	</select> -->
+	
+	Defina su provincia:
+	<br>
+	<select  name="prov" id="" value="provincia">
+		<option value="" selected="" disabled="">-</option>	
+		<optgroup label="Comunidad Valenciana">
+			<option value="">Alicante</option>
+			<option value="">Castellon</option>
+			<option value="">Valencia</option>
+		</optgroup>
+	</select>
+	<br>
+	Contraseña:<input name="Contraseña" type="password"  required="" >
+	<br>
+	Confirmación de contraseña:<input name="Contraseña" type="password" minlength="8" maxlength="15" required="">
+	<br>
+	
+	¿Acepta usted nuestras condiciones de uso?
+	<br>	
+		Si, acepto los <a href="https://www.google.es/" target="blank">Terminos y Condiciones de uso</a><input name="condiciones" type="radio" required="">
+	<br>
+		No acepto:<input name="condiciones" type="radio">
+	<br>
+	¿Desea usted que vendamos sus datos a terceros?
+	<br>	
+		Si:<input name="datos" type="radio" selected="">
+	<br>
+		No:<input name="datos" type="radio">
+	<br>
+	<br>
+	<br>
+	<input name="Borrar" type="reset" value="Borrar" >
+	<br>
+	<input name="Enviar" type="submit" >
+	
+	
+</form>
+
+</body>
+</html>

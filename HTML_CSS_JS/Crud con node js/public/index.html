@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi inventario</title>
+    <link rel="stylesheet" media="screen" href="estil.css">
+</head>
+<body class="g">
+    <h1 class='tit'>Inventario</h1>
+    <ul class='lis'>
+        <li>-Añade elementos al formulario y te enviara a una pagina que te los mostrara todos.</li>
+        <li>-Consulta todos elementos hay en la lista con "/lista".</li>
+        <li>-O consulta el que quieras por su id con "/selection/id".</li>
+        <li>-Borra aquellos elementos que no sean necesarios con "/delete/id".</li>
+    </ul>
+    <form action="http://127.0.0.1:8081/add" method="POST" target="_blank" class="cent w">
+    <!-- Pongo target="_blank" para que se quede no perder el formulario -->
+        <p>Inserta aqui los datos del artículo en cuestion.</p>
+        ID: <input type="number" name="identificador" required="" min="1" placeholder="Obligatorio"><br>
+        Nombre: <input type="text" name="nombre" required="" placeholder="Obligatorio"> <br>
+        Precio: <input type="number" name="precio" required="" min="0.01" step="0.01" placeholder="Obligatorio"> <br>
+        Disponible: <input type="checkbox" name="disponible" "> <br>
+        Unidades en Stock:<input type="number" name="restantes" min="1"><br>
+        <input type="reset" value="Restablecer">
+        <input type="submit" value="Añadir">
+        <br>
+    
+</form>
+<p>Nota: en caso de no marcar Disponible, Unidades en Stock se guardara como null.</p>
+</body>
+</html>
